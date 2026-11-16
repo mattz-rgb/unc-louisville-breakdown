@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNC vs Louisville: Post-Game Breakdown</title>
+<meta name="description" content="A position-by-position post-game breakdown of Louisville 16, North Carolina 14 (Nov. 14, 2026, Kenan Stadium), with snap counts and a scorecard of the pre-game calls.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070c16;--bg2:#0c1423;--panel:#111b2e;--panel2:#16233a;
+  --line:rgba(255,255,255,.09);--text:#e7edf7;--muted:#9aa9c2;
+  --unc:#7bafd4;--unc-deep:#13294b;--lou:#e0364d;--lou-deep:#7a0f1f;
+  --gold:#f2c14e;--ok:#4cc38a;--bad:#ef5b6b;--radius:16px;
+  --display:'Barlow Condensed','Arial Narrow',Impact,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(1200px 500px at 15% -5%,rgba(123,175,212,.12),transparent 60%),radial-gradient(1000px 500px at 100% 0%,rgba(224,54,77,.10),transparent 60%);background-repeat:no-repeat}
+a{color:var(--unc);text-decoration:none;border-bottom:1px solid rgba(123,175,212,.35)}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--unc),var(--lou));z-index:100}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,12,22,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto;border:0;color:var(--muted);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:999px;transition:.2s}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+.nav a.active{color:#fff;background:linear-gradient(135deg,rgba(123,175,212,.28),rgba(224,54,77,.22));box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 22px);-webkit-mask-image:linear-gradient(180deg,#000 40%,transparent);mask-image:linear-gradient(180deg,#000 40%,transparent)}
+.hero-inner{position:relative;max-width:1100px;margin:0 auto;padding:64px 20px 56px}
+.kicker{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-size:15px}
+h1{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;margin:10px 0 14px;font-size:clamp(40px,7.4vw,86px);letter-spacing:.005em}
+h1 .u{color:var(--unc)} h1 .l{color:var(--lou)} h1 .vs{color:var(--muted);font-size:.5em;vertical-align:middle;padding:0 .2em}
+.sub{max-width:700px;color:var(--muted);font-size:19px;margin:0 0 22px}
+.byline{color:var(--muted);font-size:14px;margin-bottom:26px}
+.byline b{color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:14px;font-weight:600}
+.chip i{font-style:normal;color:var(--muted);font-weight:500}
+.chip.bad{border-color:rgba(239,91,107,.45);color:#ff9aa6}
+.scoreboard{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.team{padding:26px 28px}
+.team.u{background:linear-gradient(135deg,var(--unc-deep),#1b3c6b)}
+.team.l{background:linear-gradient(225deg,var(--lou-deep),#a8182b);text-align:right}
+.team .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.8}
+.team .name{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.4vw,46px);text-transform:uppercase;line-height:1;margin:6px 0}
+.team .pts{font-family:var(--display);font-weight:800;font-size:clamp(64px,11vw,120px);line-height:.9;margin:6px 0 4px}
+.team .rec{font-family:var(--display);font-weight:600;font-size:21px}
+.team .rec small{font-size:14px;opacity:.78;font-family:var(--body);font-weight:500}
+.mid{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px 22px;background:var(--bg2);text-align:center;gap:2px}
+.mid .d{font-family:var(--display);font-weight:700;font-size:30px;line-height:1}
+.mid .t{color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.mid .line{margin-top:10px;font-size:13px;color:var(--gold);font-weight:700}
+
+main{max-width:860px;margin:0 auto;padding:30px 20px 100px}
+section{padding-top:56px}
+.sec-head{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:22px}
+.sec-no{font-family:var(--display);font-weight:700;color:var(--muted);letter-spacing:.2em;font-size:14px;text-transform:uppercase}
+h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(34px,5.5vw,52px);line-height:1;margin:2px 0 0;letter-spacing:.01em}
+h3{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:24px;color:var(--unc);margin:34px 0 10px;display:flex;align-items:center;gap:12px}
+h3::after{content:"";flex:1;height:1px;background:var(--line)}
+h3.d{color:#ff7b8c}
+.lede{font-size:20px;line-height:1.55;color:#fff;font-weight:500;margin:0 0 22px;padding-left:18px;border-left:3px solid var(--gold)}
+p{margin:0 0 18px;color:#d6dfee}
+p strong{color:#fff}
+.caption{font-size:13px;color:var(--muted);margin:10px 2px 24px}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:0 0 26px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;position:relative;overflow:hidden}
+.tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--muted)}
+.tile.u::before{background:var(--unc)} .tile.l::before{background:var(--lou)} .tile.g::before{background:var(--gold)}
+.tile .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.tile .v{font-family:var(--display);font-weight:700;font-size:30px;line-height:1.1;margin:4px 0 2px;color:#fff}
+.tile .s{font-size:13px;color:var(--muted);line-height:1.4}
+
+.compare{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:6px 0 10px}
+.compare h4{margin:0 0 12px;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:18px;color:var(--muted);font-weight:700}
+.cmp-head{display:grid;grid-template-columns:1fr 150px 1fr;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:20px;margin-bottom:6px}
+.cmp-head span:first-child{color:var(--unc)} .cmp-head span:last-child{color:#ff7b8c;text-align:right}
+.row{display:grid;grid-template-columns:1fr 150px 1fr;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.row .lbl{text-align:center;font-size:12px;color:var(--muted);line-height:1.3;font-weight:600}
+.row .lbl em{display:block;font-style:normal;font-size:10.5px;opacity:.7;letter-spacing:.08em;text-transform:uppercase}
+.cell{display:flex;align-items:center;gap:10px}
+.bar{flex:1;height:10px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden;display:flex}
+.cell.l .bar{justify-content:flex-end}
+.bar span{display:block;height:100%;border-radius:99px}
+.cell.l .bar span{background:linear-gradient(90deg,#3a6c93,var(--unc))}
+.cell.r .bar span{background:linear-gradient(90deg,#ff7b8c,#a8182b)}
+.val{font-family:var(--display);font-weight:700;font-size:21px;min-width:50px;color:#8e9db6}
+.cell.l .val{text-align:right} .cell.r .val{text-align:left}
+.cell.win .val{color:#fff}
+.cell:not(.win) .bar span{opacity:.45}
+
+.timeline{position:relative;margin:6px 0 10px;padding-left:6px}
+.timeline::before{content:"";position:absolute;left:92px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.ev{display:grid;grid-template-columns:84px 1fr;gap:26px;position:relative;padding:8px 0}
+.ev .sc{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.04em;text-transform:uppercase;text-align:right;color:var(--muted);padding-top:3px;line-height:1.15}.ev .sc b{display:block;font-size:16px}.ev .sc span{display:block;color:#fff;font-size:19px}
+.ev::before{content:"";position:absolute;left:86px;top:17px;width:14px;height:14px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 4px var(--bg)}
+.ev.u::before{background:var(--unc)} .ev.l::before{background:var(--lou)} .ev.x::before{background:var(--gold)}
+.ev.u .sc{color:var(--unc)} .ev.l .sc{color:#ff7b8c} .ev.x .sc{color:var(--gold)}
+.ev .bd{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-left:10px}
+.ev h4{margin:0 0 2px;font-size:16px;font-weight:700;color:#fff}
+.ev p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+
+.snaps{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:8px 0 6px}
+.snaps .st{font-family:var(--display);font-weight:800;font-size:clamp(22px,3.6vw,30px);text-transform:uppercase;line-height:1.1;margin:0 0 4px}
+.snaps .ss{font-size:14px;color:var(--muted);margin:0 0 18px}
+.sn-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 34px}
+.sn-col h4{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:18px;margin:0 0 6px;color:#fff;font-weight:700}
+.sn-col h4 span{color:var(--muted);font-weight:500;font-size:14px;margin-left:6px;letter-spacing:.02em}
+.sn-row{display:grid;grid-template-columns:26px minmax(0,1.5fr) minmax(0,1fr) 62px;align-items:center;gap:8px;padding:2px 0;font-size:13px}
+.sn-row.first{margin-top:12px}
+.sn-row.first:first-of-type{margin-top:0}
+.sn-row .pos{font-weight:700;color:var(--muted);font-size:12px}
+.sn-row .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#d6dfee}
+.sn-row .trk{height:10px;background:rgba(255,255,255,.05);border-radius:3px;position:relative}
+.sn-row .trk i{display:block;height:100%;border-radius:3px;background:#6b7a93}
+.sn-row.core .trk i{background:var(--unc)}
+.sn-row.core .nm{color:#fff}
+.sn-row .num{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;white-space:nowrap}
+.sn-row.core .num{color:#fff}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);margin:8px 0 22px}
+table.score{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.5;min-width:620px}
+.score th{text-align:left;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--muted);padding:12px 14px;border-bottom:1px solid var(--line);background:var(--bg2)}
+.score td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top;color:#d6dfee}
+.score tbody tr:first-child td{border-top:0}
+.score td:first-child{white-space:nowrap}
+.score td:first-child b{color:#fff}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.pill.y{background:rgba(76,195,138,.15);color:var(--ok);border:1px solid rgba(76,195,138,.4)}
+.pill.n{background:rgba(239,91,107,.14);color:#ff8d9a;border:1px solid rgba(239,91,107,.4)}
+
+.triple{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 14px}
+.tcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;text-align:center}
+.tcard.all{background:linear-gradient(135deg,rgba(123,175,212,.14),rgba(224,54,77,.10))}
+.tcard .k{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:14px;font-weight:700;color:var(--muted)}
+.tcard .gl{font-family:var(--display);font-weight:800;font-size:68px;line-height:1.05;margin:2px 0 6px}
+.tcard .gl.y{color:var(--gold)} .tcard .gl.r{color:#ff8d9a} .tcard .gl.g{color:var(--ok)} .tcard .gl.o{color:#fff}
+.tcard p{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.grades{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 22px}
+.gcard{display:grid;grid-template-columns:64px 1fr;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;align-items:start}
+.gcard .gl{font-family:var(--display);font-weight:800;font-size:44px;line-height:1;text-align:center;padding:6px 0;border-radius:10px;border:1px solid var(--line)}
+.gcard.g .gl{color:var(--ok);background:rgba(76,195,138,.10);border-color:rgba(76,195,138,.35)}
+.gcard.y .gl{color:var(--gold);background:rgba(242,193,78,.10);border-color:rgba(242,193,78,.35)}
+.gcard.r .gl{color:#ff8d9a;background:rgba(239,91,107,.10);border-color:rgba(239,91,107,.35)}
+.gcard h4{margin:0 0 3px;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:19px;color:#fff;font-weight:700}
+.gcard p{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
+.overall{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;background:linear-gradient(135deg,rgba(123,175,212,.12),rgba(224,54,77,.10));border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:8px 0 14px}
+.overall .gl{font-family:var(--display);font-weight:800;font-size:72px;line-height:1;text-align:center;color:var(--gold)}
+.overall h4{margin:0 0 4px;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:18px;color:var(--muted)}
+.overall p{margin:0;color:#fff;font-size:16px;line-height:1.55}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 22px}
+
+footer{border-top:1px solid var(--line);padding:30px 20px 50px;text-align:center;color:var(--muted);font-size:13px}
+#top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--panel2);color:#fff;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:60}
+#top.show{opacity:1;pointer-events:auto}
+
+@media (max-width:700px){
+  body{font-size:16px}
+  .hero-inner{padding:44px 20px 40px}
+  h1 span{display:block}
+  h1 .vs{font-size:.4em;padding:.15em 0}
+  .scoreboard{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .team .name{font-size:24px}
+  .team .pts{font-size:72px}
+  .hero-inner{padding-left:16px;padding-right:16px}
+  .mid{grid-column:1/-1;order:3;flex-direction:row;gap:14px;padding:12px}
+  .mid .line{margin-top:0}
+  .team{padding:18px}
+  .cmp-head,.row{grid-template-columns:1fr 92px 1fr}
+  .val{font-size:18px;min-width:38px}
+  .sn-grid{grid-template-columns:1fr;gap:26px}
+  .next,.grades{grid-template-columns:1fr}
+  .triple{grid-template-columns:1fr}
+  .overall{grid-template-columns:70px 1fr}.overall .gl{font-size:56px}
+  .timeline::before{left:12px}
+  .ev{grid-template-columns:1fr;gap:2px;padding-left:34px}
+  .ev::before{left:5px}
+  .ev .sc{text-align:left}
+  .ev .bd{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="nav" aria-label="Sections">
+  <div class="nav-inner" id="navlinks">
+    <a href="#result">Result</a>
+    <a href="#flow">Game flow</a>
+    <a href="#offense">Offense</a>
+    <a href="#defense">Defense</a>
+    <a href="#snaps">Snap counts</a>
+    <a href="#grades">Grades</a>
+    <a href="#preview">Preview vs reality</a>
+    <a href="#next">What's next</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Post-game &middot; Saturday, Nov. 14, 2026 &middot; Kenan Stadium</div>
+    <h1><span class="l">Louisville</span><span class="vs">over</span><span class="u">North Carolina</span></h1>
+    <p class="sub">A 16-14 loss that the box score calls fair. Six sacks, two turnovers and a failed fourth down on the last play say otherwise.</p>
+    <div class="byline">By <b>Matthew Zammit</b> &middot; Written Nov. 16 &middot; Follows the pre-game breakdown</div>
+    <div class="chips">
+      <span class="chip bad">Preview pick <i>UNC 34-31</i></span>
+      <span class="chip">Combined points <i>30</i></span>
+      <span class="chip">Position-group calls that held <i>7 of 8</i></span>
+      <span class="chip">Offense <i>D+</i></span>
+      <span class="chip">Defense <i>A-</i></span>
+      <span class="chip">Overall <i>B-</i></span>
+    </div>
+    <div class="scoreboard">
+      <div class="team u"><div class="tag">Tar Heels</div><div class="name">North Carolina</div><div class="pts">14</div><div class="rec">5-5 <small>2-4 ACC</small></div></div>
+      <div class="mid"><div class="d">FINAL</div><div class="t">Nov. 14</div><div class="line">LOU 16-14</div></div>
+      <div class="team l"><div class="tag">Cardinals</div><div class="name">Louisville</div><div class="pts">16</div><div class="rec">7-3 <small>6-2 ACC</small></div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="result">
+  <div class="sec-head"><div class="sec-no">01</div><h2>The result</h2></div>
+  <p class="lede">Louisville beat North Carolina 16-14 at Kenan Stadium. My pick of UNC 34-31 missed the winner and missed the shape of the game by a wide margin.</p>
+  <p>I expected a shootout and got 30 combined points. The Tar Heels fell to 5-5 (2-4 ACC) and still need a sixth win to become bowl-eligible. Louisville moved to 7-3 (6-2) with its fifth straight win, scoring 27.5 fewer points than it had averaged over the previous four games.</p>
+  <div class="tiles">
+    <div class="tile u"><div class="k">Sacks allowed</div><div class="v">6</div><div class="s">on 31 dropbacks, about one in five</div></div>
+    <div class="tile l"><div class="k">Turnovers</div><div class="v">2-0</div><div class="s">Louisville's way, and the fumble produced its only offensive touchdown</div></div>
+    <div class="tile u"><div class="k">Second half</div><div class="v">204-88</div><div class="s">yards for UNC, and 7 points to show for it</div></div>
+    <div class="tile g"><div class="k">Fourth down</div><div class="v">0 of 2</div><div class="s">the second failure was the last play of the game</div></div>
+  </div>
+  <div class="compare">
+    <h4>Team stats</h4>
+    <div class="cmp-head"><span>UNC</span><span></span><span>Louisville</span></div>
+    <div class="row"><div class="cell l"><div class="bar"><span style="width:97%"></span></div><div class="val">293</div></div><div class="lbl">Total yards</div><div class="cell r win"><div class="val">302</div><div class="bar"><span style="width:100%"></span></div></div></div><div class="row"><div class="cell l"><div class="bar"><span style="width:77%"></span></div><div class="val">114</div></div><div class="lbl">Net rushing<em>sack yards count against</em></div><div class="cell r win"><div class="val">148</div><div class="bar"><span style="width:100%"></span></div></div></div><div class="row"><div class="cell l win"><div class="bar"><span style="width:100%"></span></div><div class="val">179</div></div><div class="lbl">Passing yards</div><div class="cell r"><div class="val">154</div><div class="bar"><span style="width:86%"></span></div></div></div><div class="row"><div class="cell l win"><div class="bar"><span style="width:100%"></span></div><div class="val">5.1</div></div><div class="lbl">Yards per play</div><div class="cell r"><div class="val">4.7</div><div class="bar"><span style="width:92%"></span></div></div></div><div class="row"><div class="cell l"><div class="bar"><span style="width:89%"></span></div><div class="val">17</div></div><div class="lbl">First downs</div><div class="cell r win"><div class="val">19</div><div class="bar"><span style="width:100%"></span></div></div></div><div class="row"><div class="cell l win"><div class="bar"><span style="width:73%"></span></div><div class="val">55</div></div><div class="lbl">Penalty yards<em>fewer is better</em></div><div class="cell r"><div class="val">75</div><div class="bar"><span style="width:100%"></span></div></div></div><div class="row"><div class="cell l"><div class="bar"><span style="width:100%"></span></div><div class="val">6</div></div><div class="lbl">Sacks taken<em>fewer is better</em></div><div class="cell r win"><div class="val">1</div><div class="bar"><span style="width:17%"></span></div></div></div>
+  </div>
+  <p class="note caption">Also: third down UNC 7 of 14, Louisville 5 of 13. Plays and time of possession: UNC 58 plays and 28:03, Louisville 64 plays and 31:57. Penalties: UNC 6 for 55, Louisville 7 for 75.</p>
+  <p>The box score looks fair. UNC averaged more yards a play, won third down and threw for more yards. Four things decided it that the table only half shows. UNC allowed six sacks on 31 dropbacks, about one in five. It lost the turnover battle 2-0, and the one that hurt was Billy Edwards Jr.'s second-quarter fumble, which Louisville recovered at the UNC 21 and turned into the only touchdown its offense scored, a 4-play, 21-yard drive finished by a 3-yard Lincoln Kienholz pass to Jaleel Skinner. UNC lost its starting quarterback midway through the third quarter. And it went 0-for-2 on fourth down, and the second miss was the last play of the game.</p>
+</section>
+
+<section id="flow">
+  <div class="sec-head"><div class="sec-no">02</div><h2>Game flow</h2></div>
+  <p>Louisville led from the middle of the second quarter on, but UNC was never out of it. UNC opened with a 12-play, 75-yard drive that Benjamin Hall finished with an 11-yard run and led 7-3. Louisville then scored 10 unanswered points in the second quarter, and it went to the half up 13-7 while outgaining UNC 214 yards to 89. The Tar Heels managed 14 yards on everything after the opening drive in the first half.</p>
+  <p class="caption" style="margin-top:0">Scoring team on the left, running score listed UNC first.</p>
+  <div class="timeline">
+  <div class="ev u"><div class="sc"><b>UNC</b><span>7-0</span></div><div class="bd"><h4>Hall 11-yard touchdown run</h4><p>Opening drive: 12 plays, 75 yards.</p></div></div>
+<div class="ev l"><div class="sc"><b>LOU</b><span>7-3</span></div><div class="bd"><h4>Hilbert 46-yard field goal</h4><p>The first of three made field goals for Louisville.</p></div></div>
+<div class="ev l"><div class="sc"><b>LOU</b><span>7-6</span></div><div class="bd"><h4>Hilbert 32-yard field goal</h4><p>Second quarter. The start of 10 unanswered points.</p></div></div>
+<div class="ev l"><div class="sc"><b>LOU</b><span>7-13</span></div><div class="bd"><h4>Kienholz 3-yard pass to Skinner</h4><p>Four plays, 21 yards, after Edwards fumbled on a Koen Entringer strip sack and Louisville recovered at the UNC 21. Louisville led 214 yards to 89 at the half, and Hilbert missed a fourth field goal wide right just before the break.</p></div></div>
+<div class="ev x"><div class="sc"><b>Q3</b><span>7-13</span></div><div class="bd"><h4>Nobody scores</h4><p>Verhoff misses a 39-yard field goal. With 9:20 left, T.J. Capers sacks Edwards, who leaves with a neck sprain and concussion symptoms.</p></div></div>
+<div class="ev x"><div class="sc"><b>Q4</b><span>7-13</span></div><div class="bd"><h4>Turnover on downs</h4><p>Burgess&#x27;s fourth-and-4 pass from the Louisville 21 is knocked down at the line by Jerod Smith, with UNC down 13-7.</p></div></div>
+<div class="ev l"><div class="sc"><b>LOU</b><span>7-16</span></div><div class="bd"><h4>Hilbert 36-yard field goal</h4><p>A 60-yard drive that included a 49-yard run by Keyjuan Brown.</p></div></div>
+<div class="ev u"><div class="sc"><b>UNC</b><span>14-16</span></div><div class="bd"><h4>Hall 6-yard touchdown run</h4><p>Nine plays, 75 yards, with 3:43 left.</p></div></div>
+<div class="ev l"><div class="sc"><b>LOU</b><span>14-16</span></div><div class="bd"><h4>Mack intercepts Burgess</h4><p>UNC takes over at its own 30 with 1:41 left. On fourth-and-12 with 58 seconds left, the pass bounces off Shipp&#x27;s hands, Jabari Mack returns it 32 yards and slides to end the game.</p></div></div>
+  </div>
+  <p>UNC outgained Louisville 204 yards to 88 after halftime and scored 7 points, and that's where it lost the game. Three second-half drives ended with nothing: the missed field goal, the failed fourth down and the final interception.</p>
+</section>
+
+<section id="offense">
+  <div class="sec-head"><div class="sec-no">03</div><h2>Offense by position group</h2></div>
+  <p>UNC ran 59 offensive snaps. The numbers check out: the quarterbacks, backs, linemen, tight ends and receivers add up to exactly 11 players a snap, so nothing's missing. Shares are of those 59 snaps.</p>
+
+  <h3>Quarterback</h3>
+  <p>Billy Edwards Jr. took 32 snaps (54 percent) and Travis Burgess 27 (46 percent). Edwards was mostly clean, 10 of 14 for 120 yards with no interceptions, but he lost the ball on the play that cost UNC the most, a second-quarter blitz by Koen Entringer that produced a strip sack and a Louisville recovery at the UNC 21. Seven points followed within two minutes. With 9:20 left in the third quarter, T.J. Capers sacked him again, and he left with a neck sprain and concussion symptoms.</p>
+  <p>Burgess, a true freshman, replaced him in his first college appearance, and his line tells two stories. He completed 6 of 11 for 59 yards, ran eight times for 35, and led a 9-play, 75-yard touchdown drive that pulled UNC within two. He also threw the interception that ended the game and had a fourth-down incompletion early in the fourth quarter, knocked down at the line by Jerod Smith, that turned the ball over on downs at the Louisville 21 with UNC down 13-7. Louisville then drove 60 yards for the field goal that made it 16-7. Be fair to him on the last one: the ball bounced off Shipp's hands before Mack caught it. The earlier one is a decision worth questioning. UNC went for it on fourth-and-4 from the Louisville 21, which would have been a 38-yard field goal, after Verhoff had missed from 39 earlier in the half. I think the miss shaped the call, but that's my inference. Nobody said it.</p>
+
+  <h3>Running back</h3>
+  <p>Benjamin Hall led the room with 38 snaps (64 percent) and scored both touchdowns, one from 11 yards on the opening drive and one from 6 yards with 3:43 left, on 10 carries for 48 yards. Demon June took 18 snaps (31 percent) and ran seven times for 44 yards, a 6.3 average. Jaylen McGill, the listed starter, played five snaps (8 percent), which confirms Hall as the lead back and McGill as a role player now. Hall and June averaged 5.4 yards a carry together on 17 carries. The ground game wasn't the problem. The official 114 net rushing yards on 33 attempts understates it, because the NCAA counts the 38 yards lost on six sacks against the rushing total.</p>
+
+  <h3>Offensive line</h3>
+  <p>The continuity was total, and the results weren't. Jordan Hall, Christo Kelly, Andrew Threatt and Jacqawn McRoy played all 59 snaps. Cristian Alvarez played 56, and Aidan Banfield, who has been out of the starting group, took the other 3. UNC allowed six sacks and Louisville finished with seven tackles for loss for 36 yards in the official stats. When five men play nearly every snap and the line still gives up a sack on one in five dropbacks, the problem is protection, not rotation. I don't have individual pass-blocking grades, so I can't say whose sacks they were. I flagged this matchup as a top concern before the game, and it went the way I feared.</p>
+
+  <h3>Tight end</h3>
+  <p>Jelani Thurman played every snap (59), went from questionable on Wednesday to probable on Friday, and caught 5 passes for 72 yards, a 14.4 average. He didn't score, and my preview had him scoring. UNC also leaned on a second tight end more than the depth chart suggested. Carson Sneed took 15 snaps, Shamar Easter 3 and Jordan Washington 2, so tight ends other than Thurman logged 20 snaps, roughly a third of the offense. The depth chart going in had Washington second and Sneed fourth, and Sneed played more than seven times as many snaps as Washington. Whatever the intent was, in this game Sneed was the second tight end.</p>
+
+  <h3>Wide receiver</h3>
+  <p>Jordan Shipp played 56 snaps (95 percent) and caught 7 passes for 61 yards. Trech Kekahuna played 39 (66 percent), Nyqir Helton 30 (51 percent), Mason Humphrey 27 (46 percent) and Jaden Jefferson 3. With Kymistrii Young and Keeyun Chapman out, UNC ran a four-man rotation behind Shipp, and production dropped sharply after him. UNC completed 16 passes for 179 yards. Shipp and Thurman accounted for 12 of the catches and 133 of the yards, so every other receiver and every back combined for four catches and 46 yards. Helton, the listed starter, played about half the snaps and Humphrey, who isn't on the chart, played nearly as many. UNC needs a second option, because a room like this lets a defense focus on Thurman and Shipp.</p>
+</section>
+
+<section id="defense">
+  <div class="sec-head"><div class="sec-no">04</div><h2>Defense by position group</h2></div>
+  <p>The defense did enough to win. Louisville gained 302 yards at 4.7 a play, converted 5 of 13 third downs, punted five times and scored 16 points, which is 27.5 fewer than it had averaged over its previous four games. The Cardinals ran 33 times for 148 yards (4.5 a carry) and Lincoln Kienholz went 23 of 31 for 154 yards, 5.0 per attempt, with one touchdown and no interceptions. Their longest pass was 26 yards. Louisville ran eight red-zone plays, seven of them on the ground, and came away with one touchdown, the 3-yarder set up by the fumble, and three field goals. Hilbert hit from 46, 32 and 36 and missed a fourth wide right just before halftime. The defense also created no takeaways. The official stats credit UNC with one sack, one quarterback hit and two tackles for loss, no interceptions and no forced fumbles. Holding Louisville down wasn't enough without a takeaway. Patterson and Smith played every defensive snap, so I'm using 68 as the base for the shares below.</p>
+
+  <h3 class="d">Defensive line</h3>
+  <p>Melkart Abou Jaoude played 67 snaps (99 percent) and Jaylen Harvey 56 (82 percent), the two edges. Xavier Lewis played 43 (63 percent), and the interior pair of Leroy Jackson and Isaiah Johnson split the work evenly at 38 snaps each (56 percent). Donovan Hoilette added 13, Nicco Maggio 9 and Trey Giddens 1. Five of the eight men who played took 38 or fewer snaps, so UNC rotated its interior heavily and the front still didn't produce.</p>
+  <p>The pre-game call was that Louisville had the better line, and the result supports it more than UNC's defensive numbers suggest. Louisville sacked UNC six times. UNC hit Kienholz once and sacked him once, and he completed 74 percent of his throws. Lewis, who came in with seven sacks, was a rotation piece at 63 percent. The one sack came from a safety, Greg Smith, not from the front. Against the run the line did its job: 4.5 a carry for an offense that came in ranked among the top ten in rushing. Keyjuan Brown still ran 11 times for 78 yards, including 49 on the drive that ended in the field goal that made it 16-7, and Isaac Brown added 12 carries for 59, so the two of them combined for 23 carries and 137 yards.</p>
+  <p>Two names from the injury report don't appear in the snap counts. Jimmy-Phrisco Alo-Suliafu, listed probable on Friday, and Emmanuel Nwaiwu, listed questionable, didn't play. Maggio and Giddens took 10 snaps between them.</p>
+
+  <h3 class="d">Linebacker</h3>
+  <p>Derek McDonald played 65 snaps (96 percent), Peyton Seelmann 45 (66 percent) and Timir Hickman-Collins 26 (38 percent). The two-linebacker front means 136 linebacker snaps split three ways, and Hickman-Collins took 26 of them. Seelmann, who had 4.5 sacks coming in, was on the field for two-thirds of the game, so Hickman-Collins was a real part of the rotation rather than a depth name.</p>
+  <p>The linebackers were the group the preview gave to UNC, and the outcome backed it. Louisville's quarterback threw for 154 yards, its longest completion was 26 yards, and its tight end, Skinner, had four catches for 33 yards and the one touchdown, the short one after the fumble. Beyond Smith, I don't have individual tackle numbers for UNC defenders, so I can only rank the linebackers by usage, not production.</p>
+
+  <h3 class="d">Defensive back</h3>
+  <p>Jaiden Patterson and Greg Smith played all 68 snaps, Kaleb Cost 67 (99 percent) and Jalon Thompson 56 (82 percent). Smith was the most productive defender I have a line for, with a sack and two tackles for loss. The safety rotation stood out. Coleman Bryson played 37 snaps (54 percent), Javion Butts 31 (46 percent) and Peyton Waters 11 (16 percent), who returned after missing UConn with a shoulder injury and was listed probable. On the depth chart going in, Butts was the starting free safety. He played 31 snaps to Bryson's 37, so either the plan changed during the week or the depth chart doesn't match how Belichick wants to use the position. I don't know which. Kenton Dopson III, who was behind Thompson at corner, didn't appear.</p>
+  <p>The secondary held up about as well as the preview's very slight edge suggested. Louisville completed 74 percent of its passes but averaged only 5.0 yards on them, and Lawayne McCoy, who returned from injury, led the Cardinals with 6 catches for 64 yards. The group also had no interceptions on 31 attempts. The coverage didn't lose the game, and it didn't win it either.</p>
+
+  <h3 class="d">Kicking and punting</h3>
+  <p>Verhoff missed the 39-yard field goal in the third quarter, UNC's only attempt, and made both extra points. UNC punted four times for a 36.8 average, with none inside the 20. Louisville's Niall Hayes punted five times for 185 yards with a 45-yarder and two inside the 20, and Hilbert was 3 of 4. Jacob Horvath, who held for Verhoff against UConn, was out, and I don't know who held on Saturday.</p>
+</section>
+
+<section id="snaps">
+  <div class="sec-head"><div class="sec-no">05</div><h2>What the snap counts say</h2></div>
+  <p>UNC's core players barely came off the field. Four offensive linemen and Thurman played all 59 offensive snaps, and Shipp played 56. On defense Patterson and Smith played all 68, Cost and Abou Jaoude 67 and McDonald 65. The defense was on the field for 68 snaps against a Louisville offense that held the ball for nearly 32 minutes, and it still allowed only 88 yards after halftime.</p>
+  <div class="snaps">
+    <div class="st">The UNC core played almost every snap against Louisville</div>
+    <div class="ss">12 of 38 players took 90% or more of their unit's snaps (blue). Bars show the share of snaps.</div>
+    <div class="sn-grid">
+      <div class="sn-col"><h4>Offense <span>59 snaps</span></h4>
+<div class="sn-row first"><span class="pos">QB</span><span class="nm">Billy Edwards Jr.</span><span class="trk"><i style="width:54.2%"></i></span><span class="num">32 &middot; 54%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Travis Burgess</span><span class="trk"><i style="width:45.8%"></i></span><span class="num">27 &middot; 46%</span></div>
+<div class="sn-row first"><span class="pos">RB</span><span class="nm">Benjamin Hall</span><span class="trk"><i style="width:64.4%"></i></span><span class="num">38 &middot; 64%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Demon June</span><span class="trk"><i style="width:30.5%"></i></span><span class="num">18 &middot; 31%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Jaylen McGill</span><span class="trk"><i style="width:8.5%"></i></span><span class="num">5 &middot; 8%</span></div>
+<div class="sn-row core first"><span class="pos">OL</span><span class="nm">Jordan Hall</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">59 &middot; 100%</span></div>
+<div class="sn-row core"><span class="pos"></span><span class="nm">Christo Kelly</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">59 &middot; 100%</span></div>
+<div class="sn-row core"><span class="pos"></span><span class="nm">Andrew Threatt</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">59 &middot; 100%</span></div>
+<div class="sn-row core"><span class="pos"></span><span class="nm">Jacqawn McRoy</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">59 &middot; 100%</span></div>
+<div class="sn-row core"><span class="pos"></span><span class="nm">Cristian Alvarez</span><span class="trk"><i style="width:94.9%"></i></span><span class="num">56 &middot; 95%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Aidan Banfield</span><span class="trk"><i style="width:5.1%"></i></span><span class="num">3 &middot; 5%</span></div>
+<div class="sn-row core first"><span class="pos">TE</span><span class="nm">Jelani Thurman</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">59 &middot; 100%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Carson Sneed</span><span class="trk"><i style="width:25.4%"></i></span><span class="num">15 &middot; 25%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Shamar Easter</span><span class="trk"><i style="width:5.1%"></i></span><span class="num">3 &middot; 5%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Jordan Washington</span><span class="trk"><i style="width:3.4%"></i></span><span class="num">2 &middot; 3%</span></div>
+<div class="sn-row core first"><span class="pos">WR</span><span class="nm">Jordan Shipp</span><span class="trk"><i style="width:94.9%"></i></span><span class="num">56 &middot; 95%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Trech Kekahuna</span><span class="trk"><i style="width:66.1%"></i></span><span class="num">39 &middot; 66%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Nyqir Helton</span><span class="trk"><i style="width:50.8%"></i></span><span class="num">30 &middot; 51%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Mason Humphrey</span><span class="trk"><i style="width:45.8%"></i></span><span class="num">27 &middot; 46%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Jaden Jefferson</span><span class="trk"><i style="width:5.1%"></i></span><span class="num">3 &middot; 5%</span></div>
+</div>
+      <div class="sn-col"><h4>Defense <span>68 snaps</span></h4>
+<div class="sn-row core first"><span class="pos">DL</span><span class="nm">Melkart Abou Jaoude</span><span class="trk"><i style="width:98.5%"></i></span><span class="num">67 &middot; 99%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Jaylen Harvey</span><span class="trk"><i style="width:82.4%"></i></span><span class="num">56 &middot; 82%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Xavier Lewis</span><span class="trk"><i style="width:63.2%"></i></span><span class="num">43 &middot; 63%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Leroy Jackson</span><span class="trk"><i style="width:55.9%"></i></span><span class="num">38 &middot; 56%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Isaiah Johnson</span><span class="trk"><i style="width:55.9%"></i></span><span class="num">38 &middot; 56%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Donovan Hoilette</span><span class="trk"><i style="width:19.1%"></i></span><span class="num">13 &middot; 19%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Nicco Maggio</span><span class="trk"><i style="width:13.2%"></i></span><span class="num">9 &middot; 13%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Trey Giddens</span><span class="trk"><i style="width:1.5%"></i></span><span class="num">1 &middot; 1%</span></div>
+<div class="sn-row core first"><span class="pos">LB</span><span class="nm">Derek McDonald</span><span class="trk"><i style="width:95.6%"></i></span><span class="num">65 &middot; 96%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Peyton Seelmann</span><span class="trk"><i style="width:66.2%"></i></span><span class="num">45 &middot; 66%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Timir Hickman-Collins</span><span class="trk"><i style="width:38.2%"></i></span><span class="num">26 &middot; 38%</span></div>
+<div class="sn-row core first"><span class="pos">DB</span><span class="nm">Jaiden Patterson</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">68 &middot; 100%</span></div>
+<div class="sn-row core"><span class="pos"></span><span class="nm">Greg Smith</span><span class="trk"><i style="width:100.0%"></i></span><span class="num">68 &middot; 100%</span></div>
+<div class="sn-row core"><span class="pos"></span><span class="nm">Kaleb Cost</span><span class="trk"><i style="width:98.5%"></i></span><span class="num">67 &middot; 99%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Jalon Thompson</span><span class="trk"><i style="width:82.4%"></i></span><span class="num">56 &middot; 82%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Coleman Bryson</span><span class="trk"><i style="width:54.4%"></i></span><span class="num">37 &middot; 54%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Javion Butts</span><span class="trk"><i style="width:45.6%"></i></span><span class="num">31 &middot; 46%</span></div>
+<div class="sn-row"><span class="pos"></span><span class="nm">Peyton Waters</span><span class="trk"><i style="width:16.2%"></i></span><span class="num">11 &middot; 16%</span></div>
+</div>
+    </div>
+  </div>
+  <p class="caption">Shares are of 59 offensive snaps and 68 defensive snaps, the most any defender played.</p>
+  <p>The rotations that did move had real decisions behind them. The quarterback split was forced, 32 snaps to 27, and it was the biggest change in the game because it put a first-time college player in a one-score game. The safety group changed shape from the depth chart, with Bryson at 37 snaps, Butts at 31 and Waters at 11. Sneed, not Washington, was the second tight end by a margin of 15 snaps to 2. Humphrey played 27 snaps, nearly half of Shipp's total, at a position where the depth chart lists only three receivers. At running back, McGill's five snaps and Hall's 38 say the carry split is settled, and Hall's two touchdowns were the offense's only scores. Banfield's three snaps behind Alvarez are the only line change, and I wouldn't read much into them.</p>
+  <p>Two players on the injury report didn't play. Alo-Suliafu and Nwaiwu aren't in the counts, and neither is Dopson, who had been behind Thompson at corner. The two big questions coming in, Thurman and Waters, both played, and both were used differently. Thurman was on the field for every snap and finished with a team-best 72 receiving yards. Waters got 11 snaps and was the seventh man in the secondary rotation. I think UNC trusted Thurman's health completely and eased Waters back in, a distinction the identical probable designation didn't make.</p>
+  <p>The quarterback split matters most. UNC's two quarterbacks together dropped back 31 times and were sacked six. At least two of those came against Edwards, the Entringer strip sack and the Capers sack that ended his day, and at least one came against Burgess, Clark's sack on the final drive. I can't assign the other three. If most of them came after the change, the loss is partly a story about a freshman behind a line that had been protecting someone else. If most came before, the line was the story all along.</p>
+</section>
+
+<section id="grades">
+  <div class="sec-head"><div class="sec-no">06</div><h2>Position grades</h2></div>
+  <p class="lede">The defense earned an A- and the offense a D+, which averages to a B- after rounding up. The record says otherwise, and the reason is in the groups the average leaves out.</p>
+  <p>These are my grades, built from the box score, the snap counts and what I can verify. I don't have film or individual blocking and coverage charting, so the lines and the secondary are graded on results, not on how each player did his job. The scale is A to F against what a bowl-bound ACC team should produce, and the overall grade is the average of the offense and defense grades. Special teams and situational football are graded separately and aren't in it.</p>
+  <div class="triple">
+    <div class="tcard"><div class="k">Offense</div><div class="gl r">D+</div><p>Six sacks, two turnovers and 14 points, with a backfield that ran well.</p></div>
+    <div class="tcard"><div class="k">Defense</div><div class="gl g">A-</div><p>Louisville held to 16 points, 4.7 yards a play and 154 passing yards.</p></div>
+    <div class="tcard all"><div class="k">Overall</div><div class="gl o">B-</div><p>The average of D+ and A- is exactly between a C+ and a B-, and I round it up. A very good defense and a poor offense, and a 16-14 loss.</p></div>
+  </div>
+  <div class="grades"><div class="gcard y"><div class="gl">C-</div><div class="gb"><h4>Quarterback: Edwards</h4><p>Edwards was 10 of 14 for 120 with no interceptions, but the second-quarter strip sack became the only touchdown Louisville&#x27;s offense scored, and the Capers sack ended his day with a neck sprain and concussion symptoms.</p></div></div><div class="gcard y"><div class="gl">C+</div><div class="gb"><h4>Quarterback: Burgess</h4><p>A true freshman in his first college appearance, he was 6 of 11 for 59 with 35 rushing yards and led the 9-play, 75-yard touchdown drive. Against that, the fourth-down incompletion and the game-ending interception, which bounced off Shipp&#x27;s hands.</p></div></div><div class="gcard g"><div class="gl">B+</div><div class="gb"><h4>Running back</h4><p>Hall and June averaged 5.4 a carry on 17 carries and Hall scored both touchdowns. Efficient in a game the offense rarely got to lean on it.</p></div></div><div class="gcard r"><div class="gl">D+</div><div class="gb"><h4>Offensive line</h4><p>Six sacks on 31 dropbacks and seven tackles for loss allowed with five men playing 56 to 59 snaps. The run blocking held up, which keeps it from an F.</p></div></div><div class="gcard g"><div class="gl">B</div><div class="gb"><h4>Tight end</h4><p>Thurman caught 5 for 72 on all 59 snaps, a team high. No touchdown and nothing explosive, but he was the most reliable target on the field.</p></div></div><div class="gcard y"><div class="gl">C</div><div class="gb"><h4>Wide receiver</h4><p>Shipp caught 7 for 61, and the last pass bounced off his hands. The other receivers and every back combined for four catches and 46 yards.</p></div></div><div class="gcard y"><div class="gl">C-</div><div class="gb"><h4>Defensive line</h4><p>No sack from the front, one hit on Kienholz, and he completed 74 percent. It held the run to 4.5 a carry, with the two Browns at 137 yards on 23 carries.</p></div></div><div class="gcard g"><div class="gl">A</div><div class="gb"><h4>Linebacker</h4><p>Louisville&#x27;s quarterback managed 154 yards with a longest completion of 26, its tight end caught four for 33, and the Cardinals ran for 4.5 a carry. No individual tackle data, so this is a grade on results and usage.</p></div></div><div class="gcard g"><div class="gl">B+</div><div class="gb"><h4>Defensive back</h4><p>Louisville averaged 5.0 yards an attempt with nothing over 26, and Smith had a sack and two tackles for loss. No interceptions on 31 attempts, and McCoy still caught 6 for 64.</p></div></div><div class="gcard r"><div class="gl">D</div><div class="gb"><h4>Special teams</h4><p>Verhoff missed from 39, UNC punted four times at 36.8 with none inside the 20, and Hilbert was 3 of 4 while Hayes put two punts inside the 20.</p></div></div><div class="gcard r"><div class="gl">D+</div><div class="gb"><h4>Situational football</h4><p>0 for 2 on fourth down, including the fourth-and-4 from the Louisville 21 after the missed field goal. The final fourth-and-12 was desperation and doesn&#x27;t count against the grade.</p></div></div></div>
+  <p>The grades line up with the scorecard that follows. The linebackers and secondary, the two defensive groups the preview gave to UNC, graded best on defense. The offensive line, where I flagged the matchup as a top concern, and the kicking game, where I leaned UNC and was wrong, graded worst.</p>
+</section>
+
+<section id="preview">
+  <div class="sec-head"><div class="sec-no">07</div><h2>What the preview got right and wrong</h2></div>
+  <p class="lede">The position-group calls held up well and the score I put on top of them didn't.</p>
+  <p>Seven of the eight edges I gave before the game landed the way the game went, and I still picked the wrong team by writing a 34-31 shootout that none of those calls supported.</p>
+  <div class="tbl-wrap"><table class="score"><thead><tr><th>Group</th><th>Preview call</th><th>What happened</th><th>Held</th></tr></thead><tbody><tr><td><b>Quarterback</b></td><td>Louisville, slight</td><td>Kienholz 23 of 31, 154 yards, a touchdown, no turnovers. UNC&#x27;s two quarterbacks turned it over twice</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Running back</b></td><td>Louisville</td><td>Louisville out-rushed UNC 148 to 114 net, though Hall and June averaged 5.4 a carry</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Receivers and tight ends</b></td><td>Close</td><td>UNC leaned on Shipp and Thurman (133 yards). Louisville spread 154 yards among seven receivers</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Offensive line</b></td><td>Louisville, in the run game</td><td>Louisville allowed one sack and ran for 4.5 a carry. UNC allowed six</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Defensive line</b></td><td>Louisville</td><td>Six sacks and seven tackles for loss against one sack and two for UNC</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Linebacker</b></td><td>UNC</td><td>Louisville managed 154 passing yards and 4.5 a carry</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Secondary</b></td><td>UNC, very slight</td><td>Kienholz averaged 5.0 a throw and Louisville&#x27;s longest pass went 26 yards</td><td><span class="pill y">Yes</span></td></tr><tr><td><b>Special teams and intangibles</b></td><td>UNC, slight</td><td>Verhoff missed from 39, UNC went 0 for 2 on fourth down, Hilbert was 3 of 4</td><td><span class="pill n">No</span></td></tr></tbody></table></div>
+  <p>The call that missed was the special teams and intangibles edge I gave UNC, and it mattered because a missed field goal, two failed fourth downs and a turnover shaped the game. The preview also noted Louisville's season turnover margin of plus 7 against UNC's minus 1, and the game went 2-0 to the Cardinals. The fumble produced the only touchdown their offense scored.</p>
+  <p>The score is where I was wrong. I gave Louisville the better quarterback, the better offensive line, the better defensive line and the better run game, and I still had UNC scoring 34 points. Those calls couldn't produce that number, and the group calls were the part that was right. I think I leaned on the posted total of around 60 and on both teams' recent scoring to set the tone of the game, and that set it too high. The final total was 30. I also had Thurman scoring a ninth touchdown to put UNC ahead late. He caught five passes for 72 yards, played every snap and never reached the end zone. The point about him was right, because he was the best receiver on the field. The touchdown was a guess.</p>
+  <p>I couldn't have called Edwards leaving the game, and I won't blame the preview for it. What I can fairly criticize is that I named UNC's pass protection as a concern and then wrote a score that assumed it would hold. It decided the game, and the score should have reflected that.</p>
+</section>
+
+<section id="next">
+  <div class="sec-head"><div class="sec-no">08</div><h2>Where UNC goes from here</h2></div>
+  <div class="next">
+    <div class="tile u"><div class="k">Saturday, Nov. 21</div><div class="v">at Virginia</div><div class="s">12:30 p.m. ET, The CW</div></div>
+    <div class="tile u"><div class="k">Saturday, Nov. 28</div><div class="v">vs NC State</div><div class="s">Kenan Stadium, time to be announced</div></div>
+  </div>
+  <p>UNC is 5-5 and 2-4 in the ACC with two games left. One win makes the Tar Heels bowl-eligible. Fourteen points was a season low for a team that had scored at least 30 in each of its previous three games, and it came in a game where the defense held Louisville to 16.</p>
+  <p>The first question is Edwards. He left with a neck sprain and concussion symptoms, which puts his availability for Virginia in doubt. If he can't play, Burgess starts at Virginia after a debut that showed both a 75-yard touchdown drive and the final interception, and UNC would need its protection to be better than six sacks on 31 dropbacks allows. Next is the receiver room, where Shipp and Thurman produced 133 of the 179 passing yards and everyone else produced 46. Then comes the safety plan, since Butts played fewer snaps than Bryson and Waters is still coming back. Last is fourth-down decision-making, since UNC went 0 for 2 and the second failure ended the game. Verhoff's miss is part of that conversation, and so is the question of who holds for him with Horvath out.</p>
+  <p>The brawl is the loose end. Players from both teams were still shoving after Louisville took its final knee, and the flashpoint was Xavier Lewis and Louisville lineman Johnnie Brown III. Bill Belichick helped pull his players away and said afterward that you play the game between the whistles. No ejections were reported, and it's unclear whether either school or the ACC will discipline anyone. If the league does act, Lewis played 43 snaps, so it's worth watching this week.</p>
+  <p>Louisville, at 7-3 and 6-2, hosts Pittsburgh on Saturday still in the conference race.</p>
+</section>
+
+</main>
+
+<footer>
+  UNC vs Louisville post-game breakdown &middot; Matthew Zammit &middot; Independent analysis, not affiliated with either program.
+</footer>
+<button id="top" aria-label="Back to top">&uarr;</button>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress'),topBtn=document.getElementById('top');
+  function onScroll(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';topBtn.classList.toggle('show',h.scrollTop>900)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  var links=[].slice.call(document.querySelectorAll('#navlinks a')),map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  links.forEach(function(a){a.addEventListener('click',function(ev){
+    var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;
+    ev.preventDefault();
+    var y=t.getBoundingClientRect().top+window.pageYOffset-20;
+    window.scrollTo({top:y,behavior:'smooth'});
+  })});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('active')});var a=map[e.target.id];if(a){a.classList.add('active');var nb=document.getElementById('navlinks');nb.scrollLeft=a.offsetLeft-(nb.clientWidth-a.offsetWidth)/2}}})},{rootMargin:'-30% 0px -60% 0px'});
+    [].slice.call(document.querySelectorAll('main section')).forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
